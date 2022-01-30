@@ -71,12 +71,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    Workmanager().registerPeriodicTask(
-      'BackGround_Work',
-      "simplePeriodicTask",
-      initialDelay: Duration(seconds: 10),
-      frequency: Duration(seconds: 40),
-    );
+    // Workmanager().registerPeriodicTask(
+    //   'BackGround_Work',
+    //   "simplePeriodicTask",
+    //   initialDelay: Duration(seconds: 10),
+    //   frequency: Duration(seconds: 40),
+    // );
   }
 
   void _incrementCounter() {
