@@ -11,12 +11,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = ThemeData(
+      primarySwatch: Colors.deepPurple,
+    );
     return MaterialApp(
       title: 'APOD',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: theme.copyWith(
+        colorScheme: theme.colorScheme.copyWith(
+            secondary: const Color.fromARGB(255, 166, 58, 183),
+            tertiary: const Color.fromARGB(255, 58, 75, 183)),
       ),
-      home: const Dashboard(),
+      home: Dashboard(),
     );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Dashboard extends StatefulWidget {
-  const Dashboard({Key? key}) : super(key: key);
+import '../widgets/action_widget.dart';
 
+class Dashboard extends StatefulWidget {
   @override
   State<Dashboard> createState() => _DashboardState();
 }
@@ -17,10 +17,7 @@ class _DashboardState extends State<Dashboard> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            color: const Color.fromARGB(255, 74, 74, 235),
-            height: MediaQuery.of(context).size.height / 4,
-          ),
+          ActionWidget(),
           Container(
             padding: const EdgeInsets.all(5),
             height: MediaQuery.of(context).size.height * (0.63),
@@ -32,9 +29,8 @@ class _DashboardState extends State<Dashboard> {
                 mainAxisSpacing: 20,
               ),
               itemCount: 10,
-              itemBuilder: (ctx, index) => Container(
-                color: Colors.black
-              ),
+              itemBuilder: (ctx, index) =>
+                  Image.network('https://picsum.photos/200', ),
             ),
           ),
         ],
